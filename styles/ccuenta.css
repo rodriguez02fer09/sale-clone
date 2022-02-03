@@ -16,44 +16,32 @@ body {
 }
 
 
-.login{
+.cuenta{
     width: 100%;
     height: 100vh;
     display: grid;
     place-items: center;
     }
-
-    .form-login{
+    .form {
+        display: flex;
+        flex-direction: column;
+      }
+    .form-cuenta{
         display:grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
 
     }
-    .logo{
-        width: 150px;
-        margin-bottom: 48px;
-        justify-self: center;
-        display: none;
-    }
-    .title{
-        font-size:var(--lg) ;
-        margin-bottom: 12px;
-        text-align: center;
-        
-    }
-    .subtitle{
-        color:var(--very-ligth-pink);
-        font-size: var(--md);
-        font-weight: 300 ;
-        margin-top: 0px;
-        margin-bottom: 32px;
-        text-align: center  ;
-    }
-
-    .form{
+    .form div {
         display: flex;
         flex-direction: column;
-    }
+      }
+  
+    .title {
+        font-size: var(--lg);
+        margin-bottom: 36px;
+        text-align: start;
+      }
     .label{
         font-size: var(--sm);
         font-weight: bold;
@@ -69,12 +57,17 @@ body {
         padding: 6px;
         margin-bottom: 12px;
     }
+    .value{
+        color:var(--very-ligth-pink);
+        font-size: var(--md);
+        margin:8px 0 32px 0;
+    }
 
-    .primary-bottom{
-        background-color: var(--hospital-green);
+    .secundary-botton{
+        background-color: var(--white);
         border-radius: 8px;
-        border:none;
-        color:var(--white);
+        border:1px solid var(--hospital-green);
+        color:var(--hospital-green);
         width: 100%;
         cursor:pointer;
         font-size: var(--md);
@@ -82,13 +75,18 @@ body {
         height: 50px;
 
     }
-    .login-bottom{
+   
+    .login-botton{
         margin-top: 14x;
         margin-bottom: 30px;
 
     }
-    @media (max-width :640px)  {
-        .logo{
-            display: block;
+    @media (max-width: 640px) {
+        .form-cuenta     {
+          height: 100%;
         }
-    }
+        .form {
+          height: 100%;
+          justify-content: space-between;
+        }
+      }
